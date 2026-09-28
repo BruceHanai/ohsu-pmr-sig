@@ -1,0 +1,20 @@
+/* Cool palette transcribed from the supplied OHSU Colors screenshot (2026-09-24).
+   Neutral surfaces are project-specific, not additional official brand colors. */
+:root {
+ --font-sans: "Lato", Helvetica, Arial, sans-serif;
+ --font-serif: "Noto Serif", Georgia, serif;
+ --color-charcoal: #545859;
+ --color-blue: #0057B7;
+ --color-light-blue: #4698CA;
+ --color-nav: #0e4d8f; /* User-specified primary brand blue */
+ --color-accent: #ffc529;
+ --button-gradient: linear-gradient(to top,#ffc529,#ffd769);
+ --color-white: #ffffff;
+ --color-surface: #f4f6f7;
+ --color-border: #d5dcdf;
+ --color-text: var(--color-charcoal);
+ --color-primary: #0e4d8f;
+ --space-1: .5rem; --space-2: 1rem; --space-3: 1.5rem;
+ --space-4: 2rem; --space-6: 3rem; --space-8: 4rem;
+ --content-width: 72rem;
+}

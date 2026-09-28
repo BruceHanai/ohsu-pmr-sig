@@ -1,0 +1,132 @@
+@import url("tokens.css");
+* { box-sizing: border-box; }
+html { scroll-padding-top: 2rem; scroll-behavior: smooth; }
+body { margin: 0; color: var(--color-text); background: white; font: 1.125rem/1.6 var(--font-sans); }
+a { color: var(--color-primary); text-underline-offset: .15em; }
+a:hover { color: #08345f; }
+.site-header a:hover,.site-footer a:hover { color: #ffd769; }
+:focus-visible { outline: 3px solid var(--color-blue); outline-offset: 5px; }
+.wrap { width: min(78rem, calc(100% - 4rem)); margin-inline: auto; }
+.skip-link { position: absolute; top: -8rem; left: 1rem; z-index: 10; padding: 1rem; background: white; }
+.skip-link:focus { top: 1rem; }
+.site-header { background: var(--color-nav); color: white; }
+.header-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem 2rem; flex-wrap: wrap; padding-block: 1.5rem; }
+.identity { font-size: 1.5rem; font-weight: 700; line-height: 1.3; text-decoration: none; margin: 0; }
+.identity span { display: block; font-size: 1rem; font-weight: 400; margin-top: .25rem; }
+.site-header a { color: white; }
+.site-header nav { display: flex; gap: 2.5rem; flex-wrap: wrap; }
+.site-header nav a { min-height: 44px; display: inline-flex; align-items: center; font-weight: 700; text-decoration: none; }
+.site-header nav a:hover { color: #ffd769; }
+.site-header :focus-visible,.hero :focus-visible,.site-footer :focus-visible { outline-color: white; }
+.hero { background: linear-gradient(110deg, #16354d 0%, var(--color-nav) 70%, #24678a 100%); color: white; }
+.hero-inner { padding-block: 5rem 7rem; }
+.hero-copy { max-width: 53rem; }
+.eyebrow { font: 700 .9375rem/1.5 var(--font-sans); margin: 0 0 1rem; }
+h1,h2,h3 { font-family: var(--font-sans); line-height: 1.18; margin: 0; }
+h1 { font-size: clamp(2.5rem, 4.6vw, 4rem); font-weight: 700; letter-spacing: -.015em; }
+h2 { font-size: clamp(2rem, 3vw, 2.5rem); font-weight: 400; }
+h3 { font-size: 1.65rem; font-weight: 700; }
+p { margin-block: 1.25rem; }
+.lead { font-size: 1.25rem; line-height: 1.7; max-width: 43rem; margin-block: 1.75rem; }
+.button { display: inline-flex; align-items: center; min-height: 52px; padding: .7rem 2rem; border-radius: 2rem; background: var(--button-gradient); color: #403710; text-decoration: none; }
+.button:hover { color: #403710; background: linear-gradient(to bottom,#ffc529,#ffd769); }
+.pathways { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 2.75rem; position: relative; margin-top: -3.5rem; }
+.pathway { background: white; padding: 3rem 1.5rem 2rem; }
+.pathway h2 { font-size: 2.125rem; }
+.pathway p { font-size: 1.0625rem; }
+.section { padding-block: 4rem; }
+.about-grid,.involvement { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; }
+.about-grid { border-top: 1px solid var(--color-border); margin-top: 2rem; }
+.section h2,.section h3,.pathway h2 { color: #585e60; }
+.editorial { font: 1.2rem/1.85 var(--font-serif); margin-top: 0; }
+.events-section { background: var(--color-surface); }
+.notice { margin-top: 2rem; padding: 2rem; border-top: 4px solid var(--color-light-blue); background: white; }
+.status { display: block; font-size: 1rem; font-weight: 700; margin-bottom: 1rem; }
+.notice p { margin-bottom: 0; }
+.small-note { font-size: 1rem; }
+.site-footer { background: var(--color-nav); color: white; padding-block: 3rem; }
+.footer-grid { display: grid; grid-template-columns: 1fr 1.25fr auto; align-items: center; gap: 3rem; font-size: 1rem; }
+.site-footer .identity,.site-footer a { color: white; }
+.site-footer p { margin: 0; }
+.site-footer a { display: inline-block; padding-block: .75rem; }
+@media (max-width: 760px) {
+ .wrap { width: calc(100% - 2.5rem); }
+ .site-header nav { gap: 1.5rem; }
+ .hero-inner { padding-block: 3rem 5.5rem; }
+ .pathways { grid-template-columns: 1fr; gap: 0; margin-top: -2.5rem; }
+ .pathway { padding: 1.75rem 1.5rem; border-bottom: 1px solid var(--color-border); }
+ .pathway h2 { font-size: 1.8rem; }
+ .pathway p { margin-block: .75rem; }
+ .about-grid,.involvement,.footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+ .section { padding-block: 3rem; }
+ .notice { padding: 1.5rem; }
+ .footer-grid { gap: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior: auto !important; } }
+@media print { .site-header nav,.button,.skip-link,.pathways { display: none; } .hero { background: white; color: #545859; } .hero-inner,.section { padding-block: 1.5rem; } }
+
+/* Original editorial illustration: preserve clear text and mobile composition. */
+.hero { position: relative; isolation: isolate; background: #16354d; }
+.hero-art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: -2; }
+.hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(22,53,77,.97) 0%, rgba(22,53,77,.93) 36%, rgba(22,53,77,.2) 66%, transparent 80%); z-index: -1; }
+.hero-copy { max-width: 39rem; }
+.hero h1 { font-size: clamp(2.5rem,4.1vw,3.65rem); }
+.hero .lead { max-width: 33rem; }
+@media (max-width: 1000px) {
+ .hero-inner { padding-block: 3.5rem 6rem; }
+ .hero-art { object-position: 65% center; }
+ .hero::before { background: rgba(22,53,77,.82); }
+ .hero-copy { max-width: 39rem; }
+}
+@media (max-width: 760px) {
+ .hero-inner { padding-block: 3rem 5rem; }
+ .hero-art { object-position: 72% center; }
+}
+
+/* Companion illustration in the lower-page membership module. */
+.involvement { grid-template-columns: 1.15fr 1fr; align-items: center; gap: 3.5rem; }
+.involvement-image { display: block; width: 100%; height: auto; }
+.involvement-copy .editorial { margin-top: 1.5rem; }
+@media (max-width: 760px) { .involvement { grid-template-columns: 1fr; gap: 2rem; } }
+
+/* Keep hover colors above component defaults in the cascade. */
+.site-header a:hover,.site-footer a:hover { color: #ffd769; }
+
+/* Text links on light surfaces use the requested link palette. */
+a { color: #0057B7; }
+a:hover { color: #003f85; }
+.site-header a,.site-footer a { color: white; }
+.site-header a:hover,.site-header nav a:hover,.site-footer a:hover { color: #ffd769; }
+.button,.button:hover { color: #403710; }
+
+/* Typography measured from ohsu.edu's homepage, adapted to semantic roles. */
+body { font: 400 1rem/1.5 var(--font-sans); }
+h1,h2,h3 { letter-spacing: normal; }
+.hero h1 { font-size: 3.875rem; font-weight: 700; line-height: 1.21; }
+.site-header nav a { font-size: 1.125rem; font-weight: 400; line-height: 1; }
+.pathway h2 { font-size: 2.1875rem; font-weight: 400; line-height: 1.6; }
+.pathway p { font-size: 1rem; line-height: 1.5; }
+.section h2 { font-size: 2.625rem; font-weight: 300; line-height: 1.6; }
+.involvement h2 { font-size: 3rem; font-weight: 300; line-height: 1.5; }
+.section h3 { font-size: 1.5rem; font-weight: 300; line-height: 1.15; }
+.editorial,.lead { font: 400 1.25rem/1.5 var(--font-sans); }
+.button { font-size: 1.25rem; font-weight: 400; line-height: 1.5; }
+.footer-grid { font-size: .875rem; line-height: 1.5; }
+@media (max-width: 760px) {
+ .hero h1 { font-size: 1.5rem; line-height: 1.29; }
+ .pathway h2 { font-size: 1.40625rem; line-height: 1.2; }
+ .section h2 { line-height: 1.2; }
+ .involvement h2 { font-size: 2.25rem; line-height: 1.5; }
+}
+
+/* Compact multi-line headings at every viewport size. */
+h2,.pathway h2,.section h2,.involvement h2 { line-height: 1.2; }
+
+/* Highlight header navigation without changing its layout on hover. */
+.site-header nav a { padding-inline: .75rem; }
+.site-header nav a:hover { background-color: #0c3e73; }
+
+.site-header nav a:hover { color: #fff; }
+
+/* The header identity remains visually unchanged on hover. */
+.site-header a.identity:hover { color: #fff; background: transparent; text-decoration: none; }
