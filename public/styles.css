@@ -145,7 +145,6 @@ h2,.pathway h2,.section h2,.involvement h2 { line-height: 1.2; }
 }
 
 .events-calendar { display: block; width: 100%; height: 280px; margin-top: 1.5rem; border: 0; border-radius: 0; background: #f8f8f8; }
-.calendar-fallback { font-size: .9375rem; }
 
 /* Geometric menu icon avoids font-glyph baseline misalignment. */
 .menu-toggle { display: inline-flex; justify-content: center; align-items: center; gap: .625rem; min-height: 44px; padding: .625rem .875rem; line-height: 1; }
@@ -158,3 +157,24 @@ h2,.pathway h2,.section h2,.involvement h2 { line-height: 1.2; }
 .menu-toggle[aria-expanded="true"] .menu-icon span:nth-child(1) { top: 8px; transform: rotate(45deg); }
 .menu-toggle[aria-expanded="true"] .menu-icon span:nth-child(2) { opacity: 0; }
 .menu-toggle[aria-expanded="true"] .menu-icon span:nth-child(3) { top: 8px; transform: rotate(-45deg); }
+
+/* Theme controls and dark surfaces. Brand header and gold buttons stay consistent. */
+.theme-toggle { font: 400 1rem/1.25 var(--font-sans); color: white; background: transparent; border: 1px solid white; border-radius: .25rem; padding: .625rem .875rem; min-height: 44px; cursor: pointer; }
+.theme-toggle:hover { background: #0c3e73; }
+.theme-toggle[aria-pressed="true"]::before { content: "✓ "; }
+:root { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; --color-text: #dbe3e9; --color-border: #526575; }
+:root[data-theme="dark"] body { background: #101c27; }
+:root[data-theme="dark"] .pathway,:root[data-theme="dark"] .notice { background: #192a39; }
+:root[data-theme="dark"] .section h2,:root[data-theme="dark"] .section h3 { color: #edf3f7; }
+:root[data-theme="dark"] main a:not(.button) { color: #91c8ff; }
+:root[data-theme="dark"] main a:not(.button):hover { color: #c6e3ff; }
+:root[data-theme="dark"] :focus-visible { outline-color: #91c8ff; }
+:root[data-theme="dark"] .events-section { background: #152432; }
+/* Third-party calendar retains its own light palette; never invert its imagery. */
+.events-calendar { color-scheme: light; }
+@media print {
+ :root[data-theme="dark"] body,:root[data-theme="dark"] .pathway,:root[data-theme="dark"] .events-section { background: white; color: #545859; }
+ :root[data-theme="dark"] .section h2 { color: #585e60; }
+ .theme-toggle { display: none; }
+}

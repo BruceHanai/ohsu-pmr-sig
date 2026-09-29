@@ -34,3 +34,7 @@ The starter includes semantic landmarks, logical headings, a skip link, visible 
 ## Distribution
 
 artifacts/ohsu-pmr-sig-starter.zip contains the editable source and documentation, excluding Git history. It is a snapshot; regenerate it after changes. No hosting or external accounts are configured by this package.
+
+## Appearance
+
+Dark mode follows the operating system until a visitor selects the Dark mode toggle in navigation (inside Menu on mobile). Their choice is stored locally. The third-party Luma calendar retains its own light appearance.
