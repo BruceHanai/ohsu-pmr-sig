@@ -37,4 +37,4 @@ artifacts/ohsu-pmr-sig-starter.zip contains the editable source and documentatio
 
 ## Appearance
 
-Dark mode follows the operating system until a visitor selects the Dark mode toggle in navigation (inside Menu on mobile). Their choice is stored locally. The Luma calendar inherits the selected color scheme and handles its own theme rendering.
+Dark mode always follows the operating system, including changes while the page is open. There is no manual toggle or saved theme preference. The Luma calendar inherits the selected color scheme and handles its own theme rendering.

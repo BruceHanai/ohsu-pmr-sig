@@ -159,9 +159,6 @@ h2,.pathway h2,.section h2,.involvement h2 { line-height: 1.2; }
 .menu-toggle[aria-expanded="true"] .menu-icon span:nth-child(3) { top: 8px; transform: rotate(-45deg); }
 
 /* Theme controls and dark surfaces. Brand header and gold buttons stay consistent. */
-.theme-toggle { font: 400 1rem/1.25 var(--font-sans); color: white; background: transparent; border: 1px solid white; border-radius: .25rem; padding: .625rem .875rem; min-height: 44px; cursor: pointer; }
-.theme-toggle:hover { background: #0c3e73; }
-.theme-toggle[aria-pressed="true"]::before { content: "✓ "; }
 :root { color-scheme: light; }
 :root[data-theme="dark"] { color-scheme: dark; --color-text: #dbe3e9; --color-border: #526575; }
 :root[data-theme="dark"] body { background: #101c27; }
@@ -176,5 +173,4 @@ h2,.pathway h2,.section h2,.involvement h2 { line-height: 1.2; }
 @media print {
  :root[data-theme="dark"] body,:root[data-theme="dark"] .pathway,:root[data-theme="dark"] .events-section { background: white; color: #545859; }
  :root[data-theme="dark"] .section h2 { color: #585e60; }
- .theme-toggle { display: none; }
-}
+ }
