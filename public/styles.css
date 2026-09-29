@@ -144,5 +144,17 @@ h2,.pathway h2,.section h2,.involvement h2 { line-height: 1.2; }
  .site-header nav a { padding: .75rem; }
 }
 
-.events-calendar { display: block; width: 100%; height: 450px; margin-top: 2rem; border: 1px solid #bfcbda88; border-radius: 4px; background: white; }
+.events-calendar { display: block; width: 100%; height: 280px; margin-top: 1.5rem; border: 1px solid #bfcbda88; border-radius: 4px; background: white; }
 .calendar-fallback { font-size: .9375rem; }
+
+/* Geometric menu icon avoids font-glyph baseline misalignment. */
+.menu-toggle { display: inline-flex; justify-content: center; align-items: center; gap: .625rem; min-height: 44px; padding: .625rem .875rem; line-height: 1; }
+.menu-toggle > span:last-child { display: block; line-height: 1.25; }
+.menu-icon { position: relative; display: block; flex: 0 0 20px; width: 20px; height: 18px; }
+.menu-icon span { position: absolute; left: 0; width: 20px; height: 2px; background: currentColor; border-radius: 1px; }
+.menu-icon span:nth-child(1) { top: 1px; }
+.menu-icon span:nth-child(2) { top: 8px; }
+.menu-icon span:nth-child(3) { top: 15px; }
+.menu-toggle[aria-expanded="true"] .menu-icon span:nth-child(1) { top: 8px; transform: rotate(45deg); }
+.menu-toggle[aria-expanded="true"] .menu-icon span:nth-child(2) { opacity: 0; }
+.menu-toggle[aria-expanded="true"] .menu-icon span:nth-child(3) { top: 8px; transform: rotate(-45deg); }

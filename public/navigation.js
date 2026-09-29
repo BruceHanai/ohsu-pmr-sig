@@ -3,7 +3,6 @@ const navigation = document.querySelector('#main-navigation');
 const mobile = window.matchMedia('(max-width: 640px)');
 function setOpen(open) {
   toggle.setAttribute('aria-expanded', String(open));
-  toggle.querySelector('.menu-icon').textContent = open ? '×' : '☰';
   navigation.hidden = mobile.matches && !open;
 }
 function syncLayout() {
