@@ -34,4 +34,4 @@
 
 - Header navigation text stays white on hover, over #0c3e73; do not turn it yellow.
 
-- Dark mode follows system preference until toggled; saved preference stays on the device. Use light text and blue links on dark surfaces. Preserve the Luma iframe’s own palette rather than inverting its contents.
+- Dark mode follows system preference until toggled; saved preference stays on the device. Use light text and blue links on dark surfaces. Let the Luma iframe inherit the selected color scheme; do not force light mode or invert its contents.

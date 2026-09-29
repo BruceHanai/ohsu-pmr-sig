@@ -171,8 +171,8 @@ h2,.pathway h2,.section h2,.involvement h2 { line-height: 1.2; }
 :root[data-theme="dark"] main a:not(.button):hover { color: #c6e3ff; }
 :root[data-theme="dark"] :focus-visible { outline-color: #91c8ff; }
 :root[data-theme="dark"] .events-section { background: #152432; }
-/* Third-party calendar retains its own light palette; never invert its imagery. */
-.events-calendar { color-scheme: light; }
+/* Let the embedded calendar inherit the selected light/dark color scheme. */
+:root[data-theme="dark"] .events-calendar { background: #152432; }
 @media print {
  :root[data-theme="dark"] body,:root[data-theme="dark"] .pathway,:root[data-theme="dark"] .events-section { background: white; color: #545859; }
  :root[data-theme="dark"] .section h2 { color: #585e60; }
