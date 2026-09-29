@@ -25,7 +25,7 @@ No install, compilation, or build command is needed. The deployable output is pu
 
 ## Content status
 
-The introduction is draft copy. Events and membership/contact channels have honest pending states because no confirmed information was provided. Before launch, approve the copy and add real public contact/join details and confirmed events. Do not add a fake email address or inactive registration button.
+The introduction is draft copy. Events are displayed through the group’s embedded Luma calendar and update when published in Luma. Membership/contact channels still have pending states. Before launch, approve the copy and add real public contact/join details and confirmed events. Do not add a fake email address or inactive registration button.
 
 ## Accessibility verification
 
