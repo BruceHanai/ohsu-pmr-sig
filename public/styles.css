@@ -174,3 +174,20 @@ h2,.pathway h2,.section h2,.involvement h2 { line-height: 1.2; }
  :root[data-theme="dark"] body,:root[data-theme="dark"] .pathway,:root[data-theme="dark"] .events-section { background: white; color: #545859; }
  :root[data-theme="dark"] .section h2 { color: #585e60; }
  }
+
+/* National organizations: text-only identities and generous linked panels. */
+.organizations { border-bottom: 1px solid var(--color-border); }
+.organizations-intro { max-width: 42rem; margin-bottom: 2rem; }
+.organization-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.organization-card { display: flex; flex-direction: column; align-items: flex-start; padding: clamp(1.5rem, 3vw, 2.5rem); border: 1px solid var(--color-border); border-top: 4px solid #4698CA; background: #f6f9fc; text-decoration: none; }
+.organization-abbreviation { font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 700; line-height: 1.2; }
+.organization-name { display: block; margin-block: 1rem 2rem; max-width: 28rem; color: var(--color-text); font-size: 1.125rem; }
+.organization-action { display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%; margin-top: auto; font-weight: 700; text-decoration: underline; text-underline-offset: .2em; }
+.organization-action > span { font-size: 1.5rem; }
+.organization-card:hover { background: #edf4fa; border-top-color: #0057B7; }
+.organization-card:focus-visible { outline: 3px solid #0057B7; outline-offset: 5px; }
+:root[data-theme="dark"] .organization-card { background: #192a39; }
+:root[data-theme="dark"] .organization-card:hover { background: #223b50; border-top-color: #91c8ff; }
+:root[data-theme="dark"] .organization-card:focus-visible { outline-color: #91c8ff; }
+@media (max-width: 760px) { .organization-grid { grid-template-columns: 1fr; } }
+@media print { :root[data-theme="dark"] .organization-card { background: white; } }
